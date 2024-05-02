@@ -1,10 +1,10 @@
 <section class='grid-2-col'>
   <div class='box-1'>
-    <h2>Services</h2>
+    <h2>Services We Can Help You With</h2>
   </div>
   <div class='box-2'>
     <div class='flex-items'>
-      <div class='flex-items-inner'>Flex item 1</div>
+      <div class='flex-items-inner'>Mattress Removal</div>
       <div class='flex-items-inner'>Flex item 2</div>
       <div class='flex-items-inner'>Flex item 3</div>
       <div class='flex-items-inner'>Flex item 4</div>
@@ -19,12 +19,16 @@
 <style>
   .grid-2-col {
     display: grid;
-    /* grid-template-columns: 0.5fr 1.5fr; */
-    grid-template-columns: minmax(min(100%, 300px), 1fr) minmax(400px, 2fr);
-    padding: 6rem 2rem;
+    grid-template-columns: minmax(min(100%, 310px), 1fr) minmax(400px, 2fr);
+    padding: 6rem 1rem;
     align-items: start;
   }
 
+  .box-1 h2 {
+    margin: 0.8rem 0.5rem;
+    line-height: 1.3;
+    font-size: 1.6rem;
+  }
   @media (max-width: 800px) {
     .grid-2-col {
       grid-template-columns: 1fr;
@@ -36,18 +40,43 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 5px solid #5d5d5d;
-    font-size: 1.2rem;
+    border: 5px solid #5d5d5dc8;
+    font-size: 1rem;
   }
 
   .flex-items-inner {
-    margin: 0.3rem 0.2rem;
-    border: 5px solid #aaa;
+    margin: 0.6rem 0.5rem;
+    border: 5px solid #bdbcbc;
     background-color: #000;
     color: #fff;
-    padding: 0.1em;
+    padding: 0.3em;
     flex-shrink: 1;
     flex-basis: calc(45% - 1rem);
     border-radius: 10px;
+  }
+
+  @media (max-width: 59em) {
+    .grid-2-col {
+      grid-template-columns: minmax(min(100%, 150px), 1fr) minmax(450px, 2fr);
+      background-color: #cf711f;
+      padding: 5rem 0;
+    }
+
+    .flex-items-inner {
+      margin: 0.5rem 0.3rem;
+      border: 5px solid #aaa;
+      background-color: #000;
+      color: #fff;
+      /* padding: 0.1em; */
+      /* flex-shrink: 2; */
+      flex-basis: calc(40% - 0.2rem);
+    }
+  }
+
+  @media (max-width: 44em) {
+    .grid-2-col {
+      grid-template-columns: 1fr;
+      padding: 3rem 0.2rem;
+    }
   }
 </style>

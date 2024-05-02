@@ -30,31 +30,37 @@ import Form from './Form.astro';
     padding: 0 3.5rem;
     display: grid;
     /* grid-template-columns: 0.8fr 1.3fr; */
-    grid-template-columns: minmax(300px, 0.8fr) minmax(400px, 1.3fr);
-
+    grid-template-columns: minmax(300px, 0.8fr) minmax(350px, 1.1fr);
     gap: 5rem;
-    /* align-items: start; */
     place-items: center;
   }
-  @media (max-width: 800px) {
+
+  /* 
+  @media (min-width: 801px) and (max-width: 1200px) {
     .hero {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(300px, 0.9fr) minmax(350px, 1.1fr);
+    
+  } */
+
+  @media (max-width: 59em) {
+    .hero {
+      padding: 2rem 1rem;
+      gap: 1rem;
+      background-color: blueviolet;
+      grid-template-columns: minmax(310px, 1fr) minmax(300px, 1fr);
+    }
+
+    .hero-text-box {
+      background-color: chocolate;
     }
   }
 
-  @media (min-width: 801px) and (max-width: 1200px) {
+  @media (max-width: 44em) {
     .hero {
-      grid-template-columns: minmax(250px, 0.8fr) minmax(350px, 1.3fr);
-    }
-  }
-  /* @media (max-width: 59em) {
-    .hero {
+      padding: 0 1rem;
+      gap: 1rem;
+      background-color: rgb(143, 122, 162);
       grid-template-columns: 1fr;
-      padding: 0 8rem;
-      gap: 6.4rem;
     }
-  } */
-  .form {
-    background-color: #fdf2e9a4;
   }
 </style>

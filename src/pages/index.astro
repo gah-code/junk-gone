@@ -3,113 +3,30 @@ import Layout from '../layouts/Layout.astro';
 import HomeBanner from '../components/HomeBanner.astro';
 import Services from '../components/Services.astro'
 import Header from '../components/Header.astro';
-import WhatWeTake from '../components/WhatWeTake.astro';
+import GlobalStyles from '../components/GlobalStyles.astro';
+// import WhatWeTake from '../components/WhatWeTake.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
+  <GlobalStyles/>
   <main>
     <Header />
     <HomeBanner/>
-        <Services/>
+   
+  <div class='container center-text'>
+    <span class='subheading'>ECO-FRIENDLY</span>
+    <h2 class='heading-secondary'> Recycle, Donate, Dispose Of  and removes it accordingly</h2>
+  </div>
+     <Services/>
+<!-- <WhatWeTake/> -->
 
 
-<WhatWeTake/>
-
-    <div class='what-we-take'>
-      <div class='list-box'>
-        <!-- <h3>title</h3> -->
-        <ul class='list'>
-          <li class='list-item'><span>Couch</span></li>
-          <li class='list-item'><span>Mattress</span></li>
-          <li class='list-item'><span>Bed </span></li>
-          <li class='list-item'><span>Futon</span></li>
-          <li class='list-item'><span>Box Spring </span></li>
-          <li class='list-item'><span>Sofa</span></li>
-        </ul>
-            <ul class='list'>
-          <li class='list-item'><span>Couch</span></li>
-          <li class='list-item'><span>Mattress</span></li>
-          <li class='list-item'><span>Bed </span></li>
-          <li class='list-item'><span>Futon</span></li>
-          <li class='list-item'><span>Box Spring </span></li>
-          <li class='list-item'><span>Sofa</span></li>
-        </ul>
-      </div>
-
-      <div class=''>
-        <ul class='list'>
-          <li class='list-item'><span>Couch</span></li>
-          <li class='list-item'><span>Mattress</span></li>
-
-          <li class='list-item'><span>Bed </span></li>
-
-          <li class='list-item'><span>Futon</span></li>
-          <li class='list-item'><span>Box Spring </span></li>
-
-          <li class='list-item'><span>Sofa</span></li>
-        </ul>
-      </div>
-      <div class=''>
-        <ul class='list'>
-          <li class='list-item'><span>Couch</span></li>
-          <li class='list-item'><span>Mattress</span></li>
-
-          <li class='list-item'><span>Bed </span></li>
-
-          <li class='list-item'><span>Futon</span></li>
-          <li class='list-item'><span>Box Spring </span></li>
-
-          <li class='list-item'><span>Sofa</span></li>
-        </ul>
-      </div>
-
-
-
-
-    </div>
 
           <div class='centered'>centered text</div>
                 <div class='steps'>steps</div>
-    <section>
-      <div class='container'>
-        <div class='services'>
-          <ul class='cards'>
-            <li class='card card-active'>
-              <a href=''>
-                <h2>Estimate</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>Lorem Ipsum</button>
-              </a>
-            </li>
-            <li class='card'>
-              <a href=''>
-                <h2>Scheduling</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>Lorem Ipsum</button>
-              </a>
-            </li>
-            <li class='card'>
-              <a href=''>
-                <h2>Removal</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>Lorem Ipsum</button>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+
     <!-- <Services/> -->
-  </main>
+  </main> 
 </Layout>
 
 <style>
@@ -149,7 +66,7 @@ import WhatWeTake from '../components/WhatWeTake.astro';
       flex-basis: calc(45% - 1rem);
     }
 
-  
+ 
 
   .section-services {
     display: flex;
@@ -173,7 +90,7 @@ import WhatWeTake from '../components/WhatWeTake.astro';
 
   span {
     display: inline-block;
-    background-color: pink;
+    /* background-color: pink; */
     border-radius: 5px;
     margin: 3px auto;
     padding: 5px 0;
@@ -181,6 +98,29 @@ import WhatWeTake from '../components/WhatWeTake.astro';
 
     max-width: 250px;
   }
+
+  .container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.center-text {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+
   .flex1,
   .flex2,
   .flex3,
@@ -240,27 +180,5 @@ import WhatWeTake from '../components/WhatWeTake.astro';
     line-height: 1.2;
   }
 
-  .services .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .card a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .card h2 {
-    color: #fff;
-  }
-
-  .card p {
-    color: #ccc;
-  }
+  
 </style>
