@@ -25,4 +25,4 @@ pnpm-debug.log*
 .idea/
 .prettierrc.mjs
 .vscode/
-.content.md
+content.md
