@@ -24,4 +24,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 .prettierrc.mjs
-.vscode
+.vscode/

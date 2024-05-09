@@ -2,29 +2,26 @@
 import GlobalStyles from '../components/GlobalStyles.astro';
 import Layout from '../layouts/Layout.astro';
 import HomeBanner from '../components/HomeBanner.astro';
-import Services from '../components/Services.astro'
+import Services from '../components/Services.astro';
 import Header from '../components/Header.astro';
 import Banner from '../components/Banner.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
-  <GlobalStyles/>
- <main> 
-  <Header />
-  <HomeBanner/>
-  <Banner/>
-  <Services/> 
-  <div class='centered'>centered text</div>
-   <div class='steps'>steps</div>
-  </main>   
+  <GlobalStyles />
+  <main>
+    <Header />
+    <HomeBanner />
+    <Banner />
+    <Services />
+    <div class='centered'>Why Choose us</div>
+    <div class='steps'>steps</div>
+  </main>
 </Layout>
 
-<style>
-
-
-
+<style lang='scss'>
   main {
-   /* background-color: var(--clr-secondary-500); */
+    /* background-color: var(--clr-secondary-500); */
     /* margin: auto; */
     /* padding: 1rem 2rem; */
     /* width: 900px; */
@@ -39,28 +36,24 @@ import Banner from '../components/Banner.astro';
     grid-template-columns: 0.5fr 1.5fr;
     padding: 3rem;
     align-items: start;
-
   }
 
-      .flex-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      border: 5px solid #000;
-  
-    }
+  .flex-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 5px solid #000;
+  }
 
-    .flex-items-inner {
-      margin: 0.3rem 0.2rem;
-      border: 5px solid #aaa;
-      background-color: #000;
-      color: #fff;
-      padding: 0.1em;
-      flex-shrink: 1;
-      flex-basis: calc(45% - 1rem);
-    }
-
- 
+  .flex-items-inner {
+    margin: 0.3rem 0.2rem;
+    border: 5px solid #aaa;
+    background-color: #000;
+    color: #fff;
+    padding: 0.1em;
+    flex-shrink: 1;
+    flex-basis: calc(45% - 1rem);
+  }
 
   .section-services {
     display: flex;
@@ -91,9 +84,6 @@ import Banner from '../components/Banner.astro';
     max-width: 250px;
   }
 
-
-
-
   .flex1,
   .flex2,
   .flex3,
@@ -102,7 +92,7 @@ import Banner from '../components/Banner.astro';
     display: flex;
     outline: 2px solid black;
     margin-block: 1rem;
-  } 
+  }
   .flex1 > span {
     flex: 8.8%;
   }
@@ -116,7 +106,7 @@ import Banner from '../components/Banner.astro';
     align-items: center;
     padding: 8rem 3.5rem;
     place-items: center;
-    outline: solid 3px #fdf2e9; */
+    outline: solid 3px #fdf2e9;
     /* margin: 0 auto;
 
     /* min-height: 70vh;
@@ -133,7 +123,6 @@ import Banner from '../components/Banner.astro';
     background: #fdf2e9;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
   }
   .list {
     list-style: none;
@@ -152,6 +141,4 @@ import Banner from '../components/Banner.astro';
     /* gap: 1.6rem; */
     line-height: 1.2;
   }
-
-
 </style>
