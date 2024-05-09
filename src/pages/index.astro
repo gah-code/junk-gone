@@ -9,7 +9,7 @@ import Banner from '../components/Banner.astro';
 
 <Layout title='Welcome to Astro.'>
   <GlobalStyles/>
-  <main>
+ <main> 
   <Header />
   <HomeBanner/>
   <Banner/>
@@ -24,6 +24,7 @@ import Banner from '../components/Banner.astro';
 
 
   main {
+   /* background-color: var(--clr-secondary-500); */
     /* margin: auto; */
     /* padding: 1rem 2rem; */
     /* width: 900px; */
@@ -32,7 +33,7 @@ import Banner from '../components/Banner.astro';
     /* font-size: 20px; */
     /* line-height: 1.6; */
   }
- 
+
   .grid-2-col {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr;
@@ -83,12 +84,10 @@ import Banner from '../components/Banner.astro';
 
   span {
     display: inline-block;
-    /* background-color: pink; */
     border-radius: 5px;
     margin: 3px auto;
     padding: 5px 0;
     text-align: center;
-
     max-width: 250px;
   }
 
@@ -154,11 +153,5 @@ import Banner from '../components/Banner.astro';
     line-height: 1.2;
   }
 
-.eco-banner  {
-    background-color: var(--clr-secondary-500);
-    width: 100%;
-  
-  }
 
-  
 </style>

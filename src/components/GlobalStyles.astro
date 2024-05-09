@@ -19,21 +19,23 @@
     --clr-primary-300: hsl(236, 45%, 38%);
     --clr-primary-400: hsl(236, 30%, 44%);
     --clr-primary-500: hsl(238, 35%, 80%);
-    --clr-primary-600: hsl(240, 53%, 94%);
+    --clr-primary-600: hsl(240, 69%, 91%);
+    --clr-primary-700: hsl(240, 100%, 97%);
 
     --gradient-primary: linear-gradient(
       to top left,
-      hsl(57, 100%, 52%),
-      hsl(57, 97%, 71%)
+      hsl(57, 100%, 50%),
+      hsl(57, 95%, 57%)
     );
 
     --clr-secondary-100: hsl(57, 95%, 47%);
-    --clr-secondary-200: hsl(57, 78%, 56%);
+    --clr-secondary-200: hsl(57, 82%, 54%);
     --clr-secondary-300: hsl(57, 70%, 61%);
     --clr-secondary-400: hsl(57, 63%, 66%);
-    --clr-secondary-500: hsl(57, 90%, 76%);
+    --clr-secondary-500: hsl(57, 95%, 75%);
+    --clr-secondary-600: hsl(57, 100%, 90%);
 
-    --text-clr: #313131;
+    --text-clr: #202020;
 
     --clr-neutral-100: 0 0% 100%;
     --clr-neutral-200: 210 46% 95%;
@@ -46,7 +48,8 @@
   }
   html {
     font-family: 'Poppins', sans-serif;
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
+    background-color: var(--clr-secondary-600);
     /* 10px / 16px = 0.625 = 62.5% */
     /* Percentage of user's browser font-size setting */
     font-size: 62.5%;
@@ -90,17 +93,11 @@
     letter-spacing: 0.75px;
   }
 
-  .center-text {
-    text-align: center;
-    margin: 5rem 0;
-  }
   .heading-primary,
   .heading-secondary,
   .heading-tertiary {
     font-weight: 700;
     color: #333;
-    /* color: #45260a; */
-    /* color: #343a40; */
     letter-spacing: -0.5px;
   }
 
@@ -114,14 +111,47 @@
   }
 
   .heading-secondary {
-    font-size: 4rem;
+    font-size: 4.2rem;
     line-height: 1.2;
+    font-weight: 600;
     margin-bottom: 9.6rem;
   }
 
-  h2 {
+  .heading-tertiary {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--text-clr);
+  }
+
+  /* h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal;
+  } */
+
+  /**************************/
+  /* BELOW 1200px (Landscape Tablets) */
+  /**************************/
+
+  @media (max-width: 75em) {
+    html {
+      /* 9px / 16px  */
+      font-size: 56.25%;
+    }
+  }
+
+  /**************************/
+  /* BELOW 944px (Tablets) */
+  /**************************/
+
+  @media (max-width: 59em) {
+    html {
+      /* 8px / 16px = 0.5 = 50% */
+      font-size: 50%;
+    }
+
+    .heading-secondary {
+      font-size: 4rem;
+    }
   }
 </style>

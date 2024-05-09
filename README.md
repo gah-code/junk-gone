@@ -10,3 +10,8 @@ Colors:
 --clr-neutral-100: 0 0% 100%;
 --clr-neutral-200: 210 46% 95%;
 --clr-neutral-300: 0 0% 81%;
+
+Our expert team provides professional, respectful junk removal
+services for both residential and commercial needs—whether its
+clearing out homes, removing old furniture or electronics, or handling
+post-sale cleanups.

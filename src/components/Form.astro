@@ -1,22 +1,32 @@
 <div class='form-wrapper'>
   <div class='form-box'>
-    <!-- <h2 class='form-heading'>Form Heading</h2>
-   
-    <p class='form-description'>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
-      repellat?
-    </p> -->
     <div class='cta'>
       <div class='cta-text-box'>
         <h2 class='heading-secondary'>JUNK GONE JUNK REMOVAL SERVICES</h2>
+        <p class='form-description'>
+          Our values are centered on reliability, efficiency, and
+          environmentally responsible disposal. Here’s why you should choose us
+          for your junk removal needs:
+        </p>
 
-        <form class='cta-form' name='sign-up'>
+        <div class='cta-form' name='sign-up'>
           <div>
             <!-- <label for='full-name'>Full Name</label> -->
             <input
               id='full-name'
               type='text'
               placeholder='John Smith'
+              name='full-name'
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for='full-name'>Full Name</label> -->
+            <input
+              id='full-name'
+              type='text'
+              placeholder='Phone Number'
               name='full-name'
               required
             />
@@ -53,208 +63,223 @@
               <div class='child'>Lorem</div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<style>
-  .cta {
-    display: grid;
-    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-    border-radius: 11px;
-    overflow: hidden;
-    max-width: 600px;
-
-    background-color: #eba05fe4;
-  }
-
-  .cta-text-box {
-    padding: 1.5rem 3rem 1.5rem 3rem;
-    color: #45260a;
-  }
-
-  .cta .heading-secondary {
-    /* color: #45260a; */
-    color: inherit;
-    margin-bottom: 2rem;
-  }
-
-  .cta-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-  }
-
-  .cta-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 3rem;
-    row-gap: 3rem;
-  }
-
-  .cta-form label {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-  }
-
-  .cta-form input,
-  .cta-form select {
-    width: 95%;
-    padding: 1.8rem;
-    /* font-size: 1.8rem; */
-    font-family: inherit;
-    color: inherit;
-    border: none;
-    background-color: #fdf2e9;
-    border-radius: 9px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  .cta-form input::placeholder {
-    color: #aaa;
-  }
-
-  .cta *:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
-  }
-
-  .social {
-    padding: 2rem 0;
-  }
-
-  .cluster {
-    /* outline: 5px solid hotpink; */
-    padding: 0.5rem;
-
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn,
-  .btn:link,
-  .btn:visited {
-    display: inline-block;
-    text-decoration: none;
-    /* font-size: 2rem; */
-    font-weight: 500;
-    padding: 1.6rem 3.2rem;
-    border-radius: 9px;
-
-    /* Only necessary for .btn */
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-
-    /* Put transition on original "state" */
-    /* transition: background-color 0.3s; */
-    transition: all 0.3s;
-  }
-
-  .btn--full:link,
-  .btn--full:visited {
-    background-color: #e67e22;
-    color: #fff;
-  }
-
-  .btn--full:hover,
-  .btn--full:active {
-    background-color: #cf711f;
-  }
-
-  .btn--outline:link,
-  .btn--outline:visited {
-    background-color: #fff;
-    color: #555;
-  }
-
-  .btn--outline:hover,
-  .btn--outline:active {
-    background-color: #fdf2e9;
-
-    /* border: 3px solid #fff; */
-
-    /* Trick to add border inside */
-    box-shadow: inset 0 0 0 3px #fff;
-  }
-
-  .btn--form {
-    background-color: #45260a;
-    color: #fdf2e9;
-    align-self: end;
-    padding: 1.2rem;
-  }
-
-  .btn--form:hover {
-    background-color: #fff;
-    color: #555;
-  }
-
-  @media (max-width: 59em) {
+  <style>
     .cta {
-      background-color: #7cb07f;
-    }
+      display: grid;
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+      border-radius: 11px;
+      overflow: hidden;
+      max-width: 500px;
 
-    .cta-form {
-      column-gap: 2rem;
-      row-gap: 1.2rem;
+      background-color: var(--clr-primary-200);
     }
 
     .cta-text-box {
-      padding: 4rem 4rem 5rem 4rem;
+      padding: 4.5rem 3rem 3.5rem 3rem;
       color: #45260a;
     }
 
     .cta .heading-secondary {
-      /* color: #45260a; */
-      color: inherit;
-      margin-bottom: 3.5rem;
+      margin-bottom: 1.8rem;
+      color: #f2efed;
+    }
+
+    .cta .form-description {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-bottom: 2.8rem;
+      line-height: 1.15;
+      color: #f2efed;
     }
 
     .cta-text {
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 3rem;
+      row-gap: 3rem;
+    }
+
+    .cta-form label {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-form input,
+    .cta-form select {
+      width: 95%;
+      padding: 2rem;
+      /* font-size: 1.8rem; */
+      font-family: inherit;
+      color: inherit;
+      border: none;
+      background-color: #fdf2e9;
+      border-radius: 9px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-form input::placeholder {
+      color: #aaa;
+    }
+
+    .cta *:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
     }
 
     .social {
-      padding: 1rem 0 0.5rem 0;
+      padding: 2rem 0;
     }
 
     .cluster {
-      /* outline: 5px solid rgb(255, 202, 228); */
-      padding: 0.4rem;
+      outline: 5px solid hotpink;
+      padding: 0.5rem;
 
       display: flex;
-      gap: 0.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
-    .child {
-      background-color: beige;
-      padding: 0.3rem;
+    .btn,
+    .btn:link,
+    .btn:visited {
+      display: inline-block;
+      text-decoration: none;
+      /* font-size: 2rem; */
+      font-weight: 500;
+      padding: 1.6rem 3.2rem;
+      border-radius: 9px;
+
+      /* Only necessary for .btn */
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+
+      /* Put transition on original "state" */
+      /* transition: background-color 0.3s; */
+      transition: all 0.3s;
     }
 
-    .btn--form {
-      background-color: #45260a;
-      color: #fdf2e9;
-      align-self: end;
-      padding: 1.2rem;
+    .btn--full:link,
+    .btn--full:visited {
+      background-color: #e67e22;
+      color: #fff;
     }
 
-    .btn--form:hover {
+    .btn--full:hover,
+    .btn--full:active {
+      background-color: #cf711f;
+    }
+
+    .btn--outline:link,
+    .btn--outline:visited {
       background-color: #fff;
       color: #555;
     }
-  }
 
-  @media (max-width: 44em) {
-    .cta {
-      background-color: #705f51;
+    .btn--outline:hover,
+    .btn--outline:active {
+      background-color: #fdf2e9;
+
+      /* border: 3px solid #fff; */
+
+      /* Trick to add border inside */
+      box-shadow: inset 0 0 0 3px #fff;
     }
-  }
-</style>
+
+    .btn--form {
+      background-color: var(--clr-secondary-100);
+      color: #333333;
+      align-self: end;
+      padding: 2rem;
+    }
+
+    .btn--form:hover {
+      background-color: var(--clr-secondary-200);
+      color: #2b2b2b;
+    }
+
+    @media (max-width: 59em) {
+      .cta {
+        background-color: #7cb07f;
+      }
+
+      .cta-form {
+        column-gap: 2rem;
+        row-gap: 1.2rem;
+      }
+
+      .cta-text-box {
+        padding: 4rem 4rem 5rem 4rem;
+        color: #45260a;
+      }
+
+      .cta .heading-secondary {
+        margin-bottom: 2rem;
+      }
+
+      .cta .form-description {
+        /* font-size: 1.4rem; */
+        margin-bottom: 4rem;
+      }
+
+      .cta-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-form {
+        row-gap: 3.5rem;
+      }
+
+      .social {
+        padding: 1rem 0 0.5rem 0;
+      }
+
+      .cluster {
+        /* outline: 5px solid rgb(255, 202, 228); */
+        padding: 0.4rem;
+
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+
+      .child {
+        background-color: beige;
+        padding: 0.3rem;
+      }
+
+      .btn--form {
+        background-color: #45260a;
+        color: #fdf2e9;
+        align-self: end;
+        padding: 1.2rem;
+      }
+
+      .btn--form:hover {
+        background-color: #fff;
+        color: #555;
+      }
+    }
+
+    @media (max-width: 44em) {
+      .cta {
+        background-color: #705f51;
+      }
+    }
+  </style>
+</div>

@@ -1,17 +1,22 @@
 <section class='grid-2-col'>
   <div class='box-1'>
-    <h2>Services We Can Help You With</h2>
+    <h2 class='heading-tertiary'>Services We Can Help You With</h2>
+    <p>
+      We offer various junk removal services to suit your needs, whether
+      clearing out a home, disposing of old furniture or electronics, or
+      post-sale cleanups.
+    </p>
   </div>
   <div class='box-2'>
     <div class='flex-items'>
       <div class='flex-items-inner'>Mattress Removal</div>
-      <div class='flex-items-inner'>Flex item 2</div>
-      <div class='flex-items-inner'>Flex item 3</div>
-      <div class='flex-items-inner'>Flex item 4</div>
-      <div class='flex-items-inner'>Flex item 5</div>
-      <div class='flex-items-inner'>Flex item 6</div>
-      <div class='flex-items-inner'>Flex item 7</div>
-      <div class='flex-items-inner'>Flex item 8</div>
+      <div class='flex-items-inner'>Appliance Removal</div>
+      <div class='flex-items-inner'>Hot Tub Removal</div>
+      <div class='flex-items-inner'>Hoarder Cleanout</div>
+      <div class='flex-items-inner'>Furniture Removal</div>
+      <div class='flex-items-inner'>Cleanouts</div>
+      <div class='flex-items-inner'>Piano Removal</div>
+      <div class='flex-items-inner'>Junk Removal</div>
     </div>
   </div>
 </section>
@@ -20,14 +25,13 @@
   .grid-2-col {
     display: grid;
     grid-template-columns: minmax(min(100%, 310px), 1fr) minmax(400px, 2fr);
-    padding: 6rem 1rem;
+    padding: 8rem 4rem;
     align-items: start;
+    background-color: var(--clr-primary-600);
   }
 
   .box-1 h2 {
     margin: 0.8rem 0.5rem;
-    line-height: 1.3;
-    font-size: 1.6rem;
   }
   @media (max-width: 800px) {
     .grid-2-col {
@@ -40,19 +44,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 5px solid #5d5d5dc8;
-    font-size: 1rem;
+    border: 5px solid #5d5d5d90;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
   }
 
   .flex-items-inner {
     margin: 0.6rem 0.5rem;
-    border: 5px solid #bdbcbc;
-    background-color: #000;
+    border: 5px solid var(--clr-secondary-100);
+    background-color: var(--clr-primary-200);
     color: #fff;
-    padding: 0.3em;
+    padding: 1rem;
     flex-shrink: 1;
     flex-basis: calc(45% - 1rem);
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 59em) {
