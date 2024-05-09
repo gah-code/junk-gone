@@ -1,6 +1,8 @@
 <style is:global>
   /* Unscoped, delivered as-is to the browser.
      Applies to all <h1> tags on your site. */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap');
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
@@ -11,12 +13,54 @@
       rgb(var(--accent-light)) 30%,
       white 60%
     );
+
+    --clr-primary-100: hsl(236, 64%, 32%);
+    --clr-primary-200: hsl(236, 64%, 32%);
+    --clr-primary-300: hsl(236, 45%, 38%);
+    --clr-primary-400: hsl(236, 30%, 44%);
+    --clr-primary-500: hsl(238, 35%, 80%);
+    --clr-primary-600: hsl(240, 53%, 94%);
+
+    --gradient-primary: linear-gradient(
+      to top left,
+      hsl(57, 100%, 52%),
+      hsl(57, 97%, 71%)
+    );
+
+    --clr-secondary-100: hsl(57, 95%, 47%);
+    --clr-secondary-200: hsl(57, 78%, 56%);
+    --clr-secondary-300: hsl(57, 70%, 61%);
+    --clr-secondary-400: hsl(57, 63%, 66%);
+    --clr-secondary-500: hsl(57, 90%, 76%);
+
+    --text-clr: #313131;
+
+    --clr-neutral-100: 0 0% 100%;
+    --clr-neutral-200: 210 46% 95%;
+    --clr-neutral-300: 0 0% 81%;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
   html {
-    font-family: system-ui, sans-serif;
-    /* background: #13151a; */
-    background: #7798b2;
-    background-size: 224px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f3f3;
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-clr);
+    line-height: 1;
+    /* Only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
   }
   code {
     font-family:
@@ -29,8 +73,55 @@
       Courier New,
       monospace;
   }
-  h1 {
-    color: rgba(28, 27, 27, 0.962);
-    font-size: 3rem;
+
+  .container {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  }
+  .subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+  }
+
+  .center-text {
+    text-align: center;
+    margin: 5rem 0;
+  }
+  .heading-primary,
+  .heading-secondary,
+  .heading-tertiary {
+    font-weight: 700;
+    color: #333;
+    /* color: #45260a; */
+    /* color: #343a40; */
+    letter-spacing: -0.5px;
+  }
+
+  .heading-primary {
+    color: var(--clr-primary-100);
+    font-size: 6rem;
+    line-height: 1.02;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  .heading-secondary {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+  }
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 </style>

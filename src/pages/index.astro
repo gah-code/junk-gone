@@ -1,10 +1,10 @@
 ---
+import GlobalStyles from '../components/GlobalStyles.astro';
 import Layout from '../layouts/Layout.astro';
 import HomeBanner from '../components/HomeBanner.astro';
 import Services from '../components/Services.astro'
 import Header from '../components/Header.astro';
-import GlobalStyles from '../components/GlobalStyles.astro';
-// import WhatWeTake from '../components/WhatWeTake.astro';
+import Banner from '../components/Banner.astro';
 ---
 
 <Layout title='Welcome to Astro.'>
@@ -12,28 +12,25 @@ import GlobalStyles from '../components/GlobalStyles.astro';
   <main>
   <Header />
   <HomeBanner/>
-   
-  <div class='container center-text'>
-    <span class='subheading'>ECO-FRIENDLY</span>
-    <h2 class='heading-secondary'> Recycle, Donate, Dispose Of  and removes it accordingly</h2>
-  </div> 
-     <Services/> 
-
+  <Banner/>
+  <Services/> 
   <div class='centered'>centered text</div>
-                <div class='steps'>steps</div>
- 
+   <div class='steps'>steps</div>
   </main>   
 </Layout>
 
 <style>
+
+
+
   main {
     /* margin: auto; */
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     /* width: 900px; */
-    max-width: calc(100% - 1rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
+    /* max-width: calc(100% - 1rem); */
+    /* color: white; */
+    /* font-size: 20px; */
+    /* line-height: 1.6; */
   }
  
   .grid-2-col {
@@ -95,26 +92,7 @@ import GlobalStyles from '../components/GlobalStyles.astro';
     max-width: 250px;
   }
 
-  .container {
-  /* 1140px */
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-.subheading {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
-}
 
-.center-text {
-  text-align: center;
-  margin: 5rem 0;
-}
 
 
   .flex1,
@@ -174,6 +152,12 @@ import GlobalStyles from '../components/GlobalStyles.astro';
     /* align-items: center; */
     /* gap: 1.6rem; */
     line-height: 1.2;
+  }
+
+.eco-banner  {
+    background-color: var(--clr-secondary-500);
+    width: 100%;
+  
   }
 
   

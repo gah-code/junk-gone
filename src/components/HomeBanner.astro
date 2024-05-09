@@ -5,12 +5,23 @@ import Form from './Form.astro';
 <div class='section-hero'>
   <div class='hero'>
     <div class='hero-text-box'>
-      <h1 class='heading-primary'>LEAVE THE JUNK TO US SJ!</h1>
-      <p class='hero-description'>
-        We provide complete junk removal solutions in Hollister, CA. We handle
-        the heavy lifting, so you don't have to.
-      </p>
-      <a href='#cta' class='btn btn--full margin-right-sm'>Get a quote</a>
+      <!-- <h1 class='heading-primary'>LEAVE THE JUNK TO US SJ!</h1> -->
+      <div class='header__title'>
+        <!-- <h1 onclick="alert('HTML alert')"> -->
+        <h1>
+          LEAVE THE
+          <!-- Green highlight effect -->
+          <span class='highlight'>JUNK</span>
+          TO US <br />
+          <span class='highlight'>SAN JOSE</span>
+        </h1>
+        <p class='hero-description'>
+          We provide complete junk removal solutions in Hollister, CA. We handle
+          the heavy lifting, so you don't have to.
+        </p>
+        <a href='#cta' class='btn btn--full margin-right-sm'>Get a quote</a>
+      </div>
+
       <!-- Corrected typo -->
     </div>
     <Form />
@@ -30,9 +41,57 @@ import Form from './Form.astro';
     padding: 0 3.5rem;
     display: grid;
     /* grid-template-columns: 0.8fr 1.3fr; */
-    grid-template-columns: minmax(300px, 0.8fr) minmax(350px, 1.1fr);
-    gap: 5rem;
+    grid-template-columns: minmax(320px, 1fr) minmax(330px, 1fr);
+    gap: 3rem;
     place-items: center;
+  }
+
+  .hero-text-box {
+    /* padding: 0 1rem; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: rgb(43, 43, 43);
+    }
+  }
+  .header__title {
+    flex: 1;
+    font-size: 4.5rem;
+    line-height: 1.3;
+    color: var(--clr-text);
+    display: grid;
+    padding: 1rem;
+    font-weight: 700;
+    /* grid-template-columns: 4fr 1fr; */
+    row-gap: 2rem;
+    align-content: center;
+    justify-content: center;
+
+    align-items: start;
+    justify-items: start;
+  }
+
+  .highlight {
+    position: relative;
+  }
+
+  .highlight::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(1.07, 1.05) skewX(-15deg);
+    background-image: var(--gradient-primary);
   }
 
   /* 
@@ -46,12 +105,21 @@ import Form from './Form.astro';
     .hero {
       padding: 2rem 1rem;
       gap: 1rem;
-      background-color: blueviolet;
-      grid-template-columns: minmax(310px, 1fr) minmax(300px, 1fr);
+      /* background-color: blueviolet; */
+      grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    }
+
+    .header__title {
+      flex: 1;
+      font-size: 3.2rem;
+      display: grid;
+      padding: 0 3.5rem;
+      /* grid-template-columns: 4fr 1fr; */
+      row-gap: 1rem;
     }
 
     .hero-text-box {
-      background-color: chocolate;
+      background-color: rgba(254, 174, 117, 0.28);
     }
   }
 
