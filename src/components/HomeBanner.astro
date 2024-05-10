@@ -19,7 +19,7 @@ import Form from './Form.astro';
           and eco-friendly junk removal services tailored for San Jose residents
           and businesses.
         </p>
-        <a href='#cta' class='btn btn--full margin-right-sm'>Get a quote</a>
+        <button class='btn--text btn--scroll-to'>Learn more &DownArrow;</button>
       </div>
     </div>
     <Form />
@@ -53,7 +53,9 @@ import Form from './Form.astro';
     align-items: center;
 
     p {
-      font-size: 2.2rem;
+      font-size: 2rem;
+
+      // font-size: 2.2rem;
       font-weight: 500;
       color: rgb(43, 43, 43);
     }
@@ -63,13 +65,13 @@ import Form from './Form.astro';
     flex: 1;
     font-family: 'Poppins', sans-serif;
     font-style: bold;
-    font-size: 4.4rem;
+    font-size: 4.3rem;
     line-height: 1.35;
     color: var(--clr-text);
     display: grid;
     font-weight: 700;
     /* grid-template-columns: 2fr 1fr; */
-    row-gap: 4rem;
+    row-gap: 6rem;
     align-content: center;
     justify-content: center;
 
@@ -101,6 +103,37 @@ import Form from './Form.astro';
       grid-template-columns: minmax(300px, 0.9fr) minmax(350px, 1.1fr);
     
   } */
+
+  .btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    padding: 1.25rem 4.5rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .btn:hover {
+    background-color: var(--color-primary-darker);
+  }
+
+  .btn--text {
+    display: inline-block;
+    background: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--color-primary);
+    border: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
 
   @media (max-width: 59em) {
     .hero {
