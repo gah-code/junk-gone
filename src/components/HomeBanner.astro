@@ -28,10 +28,31 @@ import Form from './Form.astro';
 
 <style lang='scss'>
   .section-hero {
+    min-height: 70vh;
+    position: relative;
+    background-color: transparent;
     outline: solid 3px #fdf2e9;
-    /* padding: 4.8rem 0 9.6rem 0; */
     padding: max(4rem, 10vh) 0;
-    /* background-color: #f3f3f3; */
+  }
+
+  .section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 255, 0.144),
+        rgba(0, 119, 255, 0.421)
+      ),
+      url('../../public/image-1.jpeg');
+    opacity: 0.2; /* Set the desired opacity level here */
+    background-position: bottom;
+    background-size: cover;
+    /* padding: 4.8rem 0 9.6rem 0; */
+    z-index: -1; /* Ensures the content of the container is not affected */
   }
 
   .hero {
@@ -81,6 +102,7 @@ import Form from './Form.astro';
 
   .highlight {
     position: relative;
+    z-index: 1;
   }
 
   .highlight::after {
@@ -144,24 +166,39 @@ import Form from './Form.astro';
 
     .header__title {
       flex: 1;
-      font-size: 3.5rem;
+      font-size: 4rem;
       display: grid;
       padding: 0 3rem;
       /* grid-template-columns: 4fr 1fr; */
-      row-gap: 2rem;
+      row-gap: 5rem;
     }
 
     .hero-text-box {
-      background-color: rgba(254, 174, 117, 0.28);
+      background-color: rgba(245, 224, 210, 0.28);
     }
   }
 
   @media (max-width: 44em) {
     .hero {
       padding: 0 1rem;
-      gap: 1rem;
-      background-color: rgb(143, 122, 162);
+      gap: 1.5rem;
+      // background-color: rgb(143, 122, 162);
       grid-template-columns: 1fr;
+    }
+
+    .hero-text-box {
+      height: 75vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header__title {
+      /* z-index: 100; */
+      flex: 1;
+      font-size: 3.9rem;
+      font-weight: 700;
+      /* grid-template-columns: 2fr 1fr; */
+      row-gap: 4.5rem;
     }
   }
 </style>
