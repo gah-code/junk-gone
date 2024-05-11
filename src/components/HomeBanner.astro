@@ -1,5 +1,6 @@
 ---
 import Form from './Form.astro';
+import SectionContainer from './SectionContainer.astro';
 ---
 
 <div class='section-hero'>
@@ -32,7 +33,7 @@ import Form from './Form.astro';
     position: relative;
     background-color: transparent;
     outline: solid 3px #fdf2e9;
-    padding: max(4rem, 10vh) 0;
+    padding: max(4rem, 15vh) 0;
   }
 
   .section-hero::before {
@@ -51,7 +52,6 @@ import Form from './Form.astro';
     opacity: 0.2; /* Set the desired opacity level here */
     background-position: bottom;
     background-size: cover;
-    /* padding: 4.8rem 0 9.6rem 0; */
     z-index: -1; /* Ensures the content of the container is not affected */
   }
 
@@ -61,7 +61,6 @@ import Form from './Form.astro';
     margin: 0 auto;
     padding: 2rem 5rem;
     display: grid;
-    /* grid-template-columns: 0.8fr 1.3fr; */
     grid-template-columns: minmax(300px, 0.9fr) minmax(330px, 1.1fr);
     gap: 4rem;
     place-items: center;
@@ -72,26 +71,21 @@ import Form from './Form.astro';
     display: flex;
     flex-direction: column;
     align-items: center;
-
     p {
       font-size: 2rem;
-
-      // font-size: 2.2rem;
       font-weight: 500;
       color: rgb(43, 43, 43);
     }
   }
   .header__title {
-    /* z-index: 100; */
     flex: 1;
-    font-family: 'Poppins', sans-serif;
+    // font-family: 'Poppins', sans-serif;
     font-style: bold;
     font-size: 4.3rem;
     line-height: 1.35;
     color: var(--clr-text);
     display: grid;
     font-weight: 700;
-    /* grid-template-columns: 2fr 1fr; */
     row-gap: 6rem;
     align-content: center;
     justify-content: center;
@@ -169,7 +163,6 @@ import Form from './Form.astro';
       font-size: 4rem;
       display: grid;
       padding: 0 3rem;
-      /* grid-template-columns: 4fr 1fr; */
       row-gap: 5rem;
     }
 
@@ -182,7 +175,6 @@ import Form from './Form.astro';
     .hero {
       padding: 0 1rem;
       gap: 1.5rem;
-      // background-color: rgb(143, 122, 162);
       grid-template-columns: 1fr;
     }
 

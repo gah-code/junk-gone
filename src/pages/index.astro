@@ -5,7 +5,6 @@ import HomeBanner from '../components/HomeBanner.astro';
 import Services from '../components/Services.astro';
 import Header from '../components/Header.astro';
 import Steps from '../components/Steps.astro';
-import Banner from '../components/Banner.astro';
 import About from '../components/About.astro';
 import { Image } from 'astro:assets';
 import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
@@ -16,7 +15,6 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
   <main>
     <Header />
     <HomeBanner />
-    <!-- <Banner /> -->
     <section class='section' id='section--1'>
       <div class='section__title'>
         <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
@@ -60,11 +58,10 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
             quibusdam!
           </p>
         </div>
-        <img
-          src='img/grow-lazy.jpg'
-          data-src='img/grow.jpg'
-          alt='Plant'
+        <Image
           class='features__img lazy-img'
+          src={myImage}
+          alt='A description of my image.'
         />
 
         <img
@@ -112,14 +109,6 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
 
 <style lang='scss'>
   main {
-    /* background-color: var(--clr-secondary-500); */
-    /* margin: auto; */
-    /* padding: 1rem 2rem; */
-    /* width: 900px; */
-    /* max-width: calc(100% - 1rem); */
-    /* color: white; */
-    /* font-size: 20px; */
-    /* line-height: 1.6; */
   }
 
   .grid-2-col {
@@ -129,116 +118,12 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
     align-items: start;
   }
 
-  .flex-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 5px solid #000;
-  }
-
-  .flex-items-inner {
-    margin: 0.3rem 0.2rem;
-    border: 5px solid #aaa;
-    background-color: #000;
-    color: #fff;
-    padding: 0.1em;
-    flex-shrink: 1;
-    flex-basis: calc(45% - 1rem);
-  }
-
-  .section-services {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 1em;
-    padding: 3rem;
-    max-width: 1200px;
-    margin-inline: auto;
-  }
-
-  .section-services > :first-child {
-    flex-basis: 200px;
-    flex-grow: 1;
-  }
-
-  .section-services > :last-child {
-    flex-basis: 300px;
-    flex-grow: 9999;
-  }
-
-  span {
-    display: inline-block;
-    border-radius: 5px;
-    margin: 3px auto;
-    padding: 5px 0;
-    text-align: center;
-    max-width: 250px;
-  }
-
-  .flex1,
-  .flex2,
-  .flex3,
-  .flex4,
-  .flex5 {
-    display: flex;
-    outline: 2px solid black;
-    margin-block: 1rem;
-  }
-  .flex1 > span {
-    flex: 8.8%;
-  }
-  .flex2 > span {
-    flex: 33.33%;
-  }
-
-  .what-we-take {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    padding: 8rem 3.5rem;
-    place-items: center;
-    outline: solid 3px #fdf2e9;
-    /* margin: 0 auto;
-
-    /* min-height: 70vh;
-    max-width: 80ch;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
-    place-content: center;
-    justify-items: center; */
-  }
-
-  .list-box {
-    background: #fdf2e9;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    /* gap: 1.6rem; */
-  }
-
-  .list-item {
-    font-size: 1rem;
-    display: flex;
-    background: #fdf2e9;
-    /* align-items: center; */
-    /* gap: 1.6rem; */
-    line-height: 1.2;
-  }
-
   .features {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     row-gap: 5rem;
-    margin: 0 12rem;
+    margin: 10rem;
   }
 
   .features__img {
@@ -290,8 +175,9 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
   }
 
   .section__title {
-    max-width: 80rem;
-    margin: 0 auto 8rem auto;
+    width: 70%;
+    margin: 9rem auto 0 auto;
+    padding-bottom: 10rem;
   }
 
   .section__description {
