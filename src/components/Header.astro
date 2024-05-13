@@ -1,5 +1,10 @@
 ---
 import SectionContainer from './SectionContainer.astro';
+import Logo from '../../public/logo-1.jpeg'; // Image is 1600x900
+import { Image } from 'astro:assets';
+
+// import { Logo } from 'astro:assets';
+
 // import Nav from './Nav.astro';
 // import ButtonGroup from './button/ButtonGroup.astro';
 // import { Icon } from 'astro-icon';
@@ -7,12 +12,43 @@ import SectionContainer from './SectionContainer.astro';
 // import navData from '@/data/navData.json';
 ---
 
-<header>Header</header>
+<header>
+  <nav class='nav'>
+    <Image
+      class='nav__logo lazy-img'
+      src={Logo}
+      alt='A description of my image.'
+    />
+  </nav>
 
-<!-- Nav-->
+  <!-- Nav-->
 
-<style>
-  header {
-    padding: 2rem 0;
-  }
-</style>
+  <style>
+    /* NAVIGATION */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 9rem;
+      width: 100%;
+      padding: 0 6rem;
+      z-index: 100;
+    }
+
+    /* nav and stickly class at the same time */
+    .nav.sticky {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav__logo {
+      /* height: 4.5rem; */
+      transition: all 0.3s;
+      width: 130px;
+      height: auto;
+    }
+    header {
+      padding: 2rem 0;
+    }
+  </style>
+</header>

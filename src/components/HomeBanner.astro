@@ -86,7 +86,7 @@ import SectionContainer from './SectionContainer.astro';
     color: var(--clr-text);
     display: grid;
     font-weight: 700;
-    row-gap: 6rem;
+    row-gap: 5rem;
     align-content: center;
     justify-content: center;
 
@@ -113,16 +113,14 @@ import SectionContainer from './SectionContainer.astro';
     background-image: var(--gradient-primary);
   }
 
-  /* 
-  @media (min-width: 801px) and (max-width: 1200px) {
-    .hero {
-      grid-template-columns: minmax(300px, 0.9fr) minmax(350px, 1.1fr);
-    
-  } */
+  .hero-description {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
 
   .btn {
     display: inline-block;
-    background-color: var(--color-primary);
+    background-color: var(--clr-primary-200);
     font-size: 1.6rem;
     font-family: inherit;
     font-weight: 500;
@@ -134,21 +132,25 @@ import SectionContainer from './SectionContainer.astro';
   }
 
   .btn:hover {
-    background-color: var(--color-primary-darker);
+    background-color: var(--color-primary);
   }
 
   .btn--text {
     display: inline-block;
     background: none;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: inherit;
-    font-weight: 500;
-    color: var(--color-primary);
+    font-weight: 600;
+    color: var(--text-clr);
     border: none;
     border-bottom: 1px solid currentColor;
     padding-bottom: 2px;
     cursor: pointer;
     transition: all 0.3s;
+  }
+
+  .btn--text:hover {
+    color: var(--clr-primary-100);
   }
 
   @media (max-width: 59em) {
@@ -171,9 +173,10 @@ import SectionContainer from './SectionContainer.astro';
     }
   }
 
+  /* BELOW 704px (Smaller tablets) */
   @media (max-width: 44em) {
     .hero {
-      padding: 0 1rem;
+      padding: 0 2.5rem 3rem 2.5rem;
       gap: 1.5rem;
       grid-template-columns: 1fr;
     }
@@ -187,10 +190,26 @@ import SectionContainer from './SectionContainer.astro';
     .header__title {
       /* z-index: 100; */
       flex: 1;
-      font-size: 3.9rem;
+      font-size: 3.5rem;
       font-weight: 700;
       /* grid-template-columns: 2fr 1fr; */
       row-gap: 4.5rem;
+    }
+  }
+
+  @media (max-width: 34em) {
+    .section-hero {
+      min-height: 60vh;
+      padding: max(1rem, 6vh) 0;
+    }
+    .hero {
+      padding: 0 0.2rem 1rem 0.2rem;
+      gap: 4rem;
+    }
+    .header__title {
+      font-weight: 700;
+      row-gap: 4.5rem;
+      line-height: 1.25;
     }
   }
 </style>
