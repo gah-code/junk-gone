@@ -48,7 +48,7 @@ import SectionContainer from './SectionContainer.astro';
         rgba(215, 231, 37, 0.472),
         rgba(4, 3, 0, 0.589)
       ),
-      url('../../public/image-1.jpeg');
+      url('/image-1.jpeg');
     opacity: 0.3; /* Set the desired opacity level here */
     background-position: bottom;
     background-size: cover;
@@ -201,6 +201,12 @@ import SectionContainer from './SectionContainer.astro';
     .section-hero {
       min-height: 60vh;
       padding: max(1rem, 6vh) 0;
+    }
+
+    .section-hero::before {
+      background-position: bottom;
+      background-size: auto;
+      z-index: -1; /* Ensures the content of the container is not affected */
     }
     .hero {
       padding: 0 0.2rem 1rem 0.2rem;

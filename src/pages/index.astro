@@ -6,6 +6,7 @@ import Services from '../components/Services.astro';
 import Header from '../components/Header.astro';
 import Steps from '../components/Steps.astro';
 import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
 ---
@@ -32,7 +33,7 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
         <div class='features__feature'>
           <div class='features__icon'>
             <svg data-icon='icon'>
-              <use xlink:href='public/icons.svg#icon-credit-card'></use>
+              <use xlink:href='/icons.svg#icon-credit-card'></use>
             </svg>
           </div>
           <h5 class='features__header'>ECO-FRIENDLY</h5>
@@ -94,7 +95,7 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
         Everything you need in a modern bank and more.
       </h3>
     </div>
-
+    <Services />
     <Steps />
     <!-- <div class='section__title'>
       <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
@@ -102,8 +103,9 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
         Everything you need in a modern bank and more.
       </h3>
     </div> -->
-    <Services />
+
     <About />
+    <Footer />
   </main>
 </Layout>
 
