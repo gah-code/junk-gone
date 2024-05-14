@@ -80,8 +80,8 @@
     border-radius: 5px;
     overflow: hidden;
     max-width: 485px;
-    border: solid 4px var(--clr-primary-200);
-    background-color: var(--clr-secondary-600);
+    border: solid 4px var(--clr-secondary-200);
+    background-color: var(--clr-primary-200);
 
     /* background-color: var(--clr-primary-200); */
   }
@@ -93,6 +93,7 @@
 
   .cta .heading-secondary {
     margin-bottom: 2rem;
+    color: #fffffe;
 
     /* color: var(--clr-primary-100); */
   }
@@ -103,7 +104,8 @@
     font-size: 1.8rem;
     margin-bottom: 4rem;
     line-height: 1.15;
-    color: var(--clr-text);
+    /* color: var(--clr-text); */
+    color: #fffffe;
   }
 
   .cta-text {
@@ -134,7 +136,7 @@
     font-family: inherit;
     color: inherit;
     border: none;
-    background-color: #fcfcfddd;
+    background-color: #fcfcfde6;
     border-radius: 9px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
   }
@@ -167,19 +169,12 @@
     display: inline-block;
     text-decoration: none;
     margin: 1.3rem 0 0.3rem 0;
-
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     padding: 1.6rem 3.2rem;
-    border-radius: 9px;
-
-    /* Only necessary for .btn */
+    border-radius: 5px;
     border: none;
     cursor: pointer;
-    /* font-family: inherit; */
-
-    /* Put transition on original "state" */
-    /* transition: background-color 0.3s; */
     transition: all 0.3s;
   }
 
@@ -211,15 +206,16 @@
   }
 
   .btn--form {
-    background-color: var(--clr-secondary-100);
-    color: #333333;
+    background-color: var(--clr-secondary-200);
+    color: #171717;
     align-self: end;
     padding: 2rem;
   }
 
   .btn--form:hover {
-    background-color: var(--clr-secondary-200);
-    color: #2b2b2b;
+    background-color: var(--clr-primary-400);
+    border: solid 4px var(--clr-secondary-200);
+    color: #ebe9e9;
   }
 
   @media (max-width: 59em) {
@@ -272,18 +268,6 @@
       background-color: beige;
       padding: 0.3rem;
     }
-
-    .btn--form {
-      /* background-color: #45260a; */
-      color: #fdf2e9;
-      align-self: end;
-      padding: 1.2rem;
-    }
-
-    .btn--form:hover {
-      background-color: #fff;
-      color: #555;
-    }
   }
 
   @media (max-width: 44em) {
@@ -306,7 +290,7 @@
 
   @media (max-width: 44em) {
     .form-wrapper {
-      padding: 1.5rem 0.5rem;
+      padding: 1.5rem 1.5rem;
     }
   }
 </style>
