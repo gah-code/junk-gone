@@ -10,10 +10,10 @@ interface Props {
 }
 
 const {
-  title = 'Junk Gone San Jose',
+  title = 'junk gone hauling and junk removal services san jose',
   description = 'Junk Removal San Jose│ We have been providing junk removal services in San Jose for years. With our experience, we can help you get rid of anything from furniture to appliances, yard waste and much more',
   url,
-  image = '/logo-1.jpeg',
+  image = 'logo-1.jpeg',
   author = 'Gilberto Haro',
 } = Astro.props;
 ---
@@ -26,7 +26,7 @@ const {
       content='Junk Removal San Jose │ We have been providing junk removal services in San Jose for years. With our experience, we can help you get rid of anything from furniture to appliances, yard waste and much more'
     />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/public/logo-1.jpeg' />
+    <link rel='icon' type='image/svg+xml' href='logo-1.jpeg' />
     <SiteMeta
       title={title}
       description={description.substring(0, 100)}
