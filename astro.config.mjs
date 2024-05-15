@@ -1,4 +1,6 @@
 import { defineConfig } from "astro/config";
+import compress from "astro-compress";
+
 import icon from "astro-icon";
 
 // import icon from "astro-icon";

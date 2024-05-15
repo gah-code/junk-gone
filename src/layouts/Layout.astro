@@ -1,13 +1,15 @@
 ---
 import SiteMeta from '../components/SiteMeta.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
-interface Props {
-  title: string;
-  description: string;
-  url: string;
-  image: string;
-  author: string;
-}
+// interface Props {
+// title: string;
+// description: string;
+// url: string;
+// image: string;
+// author: string;
+// }
 
 const {
   title = 'junk gone hauling and junk removal services san jose',
@@ -16,6 +18,8 @@ const {
   image = 'logo-1.jpeg',
   author = 'Gilberto Haro',
 } = Astro.props;
+
+// const { title } = Astro.props;
 ---
 
 <html lang='en'>
@@ -37,9 +41,19 @@ const {
       author={author}
     />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
+    <!-- <title>{title}</title> -->
   </head>
   <body>
+    <Header />
     <slot />
+    <Footer />
+    <script
+      type='module'
+      src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js'
+    ></script>
+    <script
+      nomodule
+      src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js'
+    ></script>
   </body>
 </html>

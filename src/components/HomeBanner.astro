@@ -15,10 +15,7 @@ import SectionContainer from './SectionContainer.astro';
           <span class='highlight'>SAN JOSE</span>
         </h1>
         <p class='hero-description'>
-          We handle the heavy lifting, so you don't have to! At Junk Gone
-          Hauling and Junk Removal Services, we offer professional, reliable,
-          and eco-friendly junk removal services tailored for San Jose residents
-          and businesses.
+          We handle the heavy lifting, so you don't have to!
         </p>
         <button class='btn--text btn--scroll-to'>Learn more &DownArrow;</button>
       </div>
@@ -45,11 +42,12 @@ import SectionContainer from './SectionContainer.astro';
     bottom: 0;
     background-image: linear-gradient(
         180deg,
-        rgba(215, 231, 37, 0.472),
-        rgba(4, 3, 0, 0.589)
+        rgba(209, 191, 33, 0.368),
+        rgba(187, 190, 21, 0.463),
+        rgba(3, 5, 7, 0.589)
       ),
       url('/image-1.jpeg');
-    opacity: 0.3; /* Set the desired opacity level here */
+    opacity: 0.4; /* Set the desired opacity level here */
     background-position: bottom;
     background-size: cover;
     z-index: -1; /* Ensures the content of the container is not affected */
@@ -67,14 +65,14 @@ import SectionContainer from './SectionContainer.astro';
   }
 
   .hero-text-box {
-    height: 100vh;
+    // height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     p {
-      font-size: 2rem;
+      font-size: 2.8rem;
       font-weight: 500;
-      color: rgb(43, 43, 43);
+      color: rgb(9, 9, 9);
     }
   }
   .header__title {
@@ -82,10 +80,10 @@ import SectionContainer from './SectionContainer.astro';
     // font-family: 'Poppins', sans-serif;
     font-style: bold;
     font-size: 4.3rem;
-    line-height: 1.35;
+    line-height: 1.3;
     color: var(--clr-text);
     display: grid;
-    font-weight: 700;
+    font-weight: 800;
     row-gap: 5rem;
     align-content: center;
     justify-content: center;
@@ -157,7 +155,7 @@ import SectionContainer from './SectionContainer.astro';
     .hero {
       padding: 2rem 1rem;
       gap: 1rem;
-      grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+      grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
     }
 
     .header__title {
@@ -190,7 +188,7 @@ import SectionContainer from './SectionContainer.astro';
     .header__title {
       /* z-index: 100; */
       flex: 1;
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 700;
       /* grid-template-columns: 2fr 1fr; */
       row-gap: 4.5rem;
@@ -200,7 +198,7 @@ import SectionContainer from './SectionContainer.astro';
   @media (max-width: 34em) {
     .section-hero {
       min-height: 60vh;
-      padding: max(1rem, 6vh) 0;
+      padding: max(1rem, 5vh) 0;
     }
 
     .section-hero::before {
@@ -209,13 +207,12 @@ import SectionContainer from './SectionContainer.astro';
       z-index: -1; /* Ensures the content of the container is not affected */
     }
     .hero {
-      padding: 0 0.2rem 1rem 0.2rem;
-      gap: 4rem;
+      padding: 0 0.5rem 1rem 0.5rem;
+      gap: 2rem;
     }
-    .header__title {
-      font-weight: 700;
-      row-gap: 4.5rem;
-      line-height: 1.25;
+
+    .hero-text-box {
+      height: 70vh;
     }
   }
 </style>

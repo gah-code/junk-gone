@@ -3,19 +3,28 @@ import GlobalStyles from '../components/GlobalStyles.astro';
 import Layout from '../layouts/Layout.astro';
 import HomeBanner from '../components/HomeBanner.astro';
 import Services from '../components/Services.astro';
-import Header from '../components/Header.astro';
+// import Header from '../components/Header.astro';
 import Steps from '../components/Steps.astro';
 import About from '../components/About.astro';
-import Footer from '../components/Footer.astro';
+// import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
+// const title = Astro.props;
 ---
 
-<Layout title='Junk gone hauling and junk removal services'>
+<Layout title='home'>
   <GlobalStyles />
   <main>
-    <Header />
+    <!-- <Header /> -->
+
     <HomeBanner />
+    <div class='section__title'>
+      <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
+      <h3 class='section__header'>
+        Everything you need in a modern junk removal service
+      </h3>
+    </div>
+    <Services />
     <section class='section' id='section--1'>
       <div class='section__title'>
         <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
@@ -95,7 +104,7 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
         Everything you need in a modern bank and more.
       </h3>
     </div>
-    <Services />
+
     <Steps />
     <!-- <div class='section__title'>
       <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
@@ -105,7 +114,7 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
     </div> -->
 
     <About />
-    <Footer />
+    <!-- <Footer /> -->
   </main>
 </Layout>
 
@@ -136,11 +145,11 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
       padding: 0 1.5rem;
 
       // margin: 5rem 3rem;
-      border: solid 3px yellowgreen;
+      // border: solid 3px yellowgreen;
     }
     .features__feature:nth-child(2) {
       grid-row: 1;
-      background-color: rgb(216, 174, 255);
+      // background-color: rgb(216, 174, 255);
     }
     .features__feature:nth-child(3) {
       grid-row: 3;
@@ -190,7 +199,7 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
   .section {
     padding: 12rem 3rem;
     border-top: 1px solid #ddd;
-    background-color: var(--clr-primary-800);
+    // background-color: var(--clr-primary-800);
     transition:
       transform 1s,
       opacity 1s;
@@ -208,6 +217,9 @@ import myImage from '../../public/image-1.jpeg'; // Image is 1600x900
   }
 
   @media (max-width: 44em) {
+    .section {
+      margin-top: -3rem;
+    }
     .section__title {
       // text-align: center;
       width: 90%;

@@ -208,6 +208,11 @@ import { Image } from 'astro:assets';
     .address-col {
       grid-column: span 3;
     }
+    .nav-col {
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 3.2rem;
+    }
   }
 
   @media (max-width: 34em) {
@@ -219,6 +224,10 @@ import { Image } from 'astro:assets';
     .grid--3-cols,
     .grid--4-cols {
       grid-template-columns: 1fr;
+    }
+
+    .logo {
+      width: 120px;
     }
   }
 </style>
