@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 // import compress from "astro-compress";
+import AstroPWA from "@vite-pwa/astro";
 
 import icon from "astro-icon";
 
